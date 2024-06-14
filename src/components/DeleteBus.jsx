@@ -13,7 +13,7 @@ const DeleteBus = () => {
 
     const deleteCourse=(id)=>{
         let input={"_id":id}
-        axios.post("http://localhost:8080/delete",data).then(
+        axios.post("http://localhost:8080/delete",input).then(
             (response)=>{
                 console.log(response.data)
                 if (response.data.status=="success") {
@@ -79,7 +79,7 @@ const DeleteBus = () => {
             <td>{value.route}</td>
             <td>{value.busNo}</td>
             <td>{value.drivername}</td>
-            <td><button className="btn btn-warning" onClick={readValue}>Delete</button></td>
+            <td><button className="btn btn-warning" onClick={()=>deleteCourse(value._id)}>Delete</button></td>
 
           </tr>
         }
