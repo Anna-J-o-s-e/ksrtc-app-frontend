@@ -10,7 +10,8 @@ const SignUp = () => {
             "email": "",
             "phone": "",
             "gender": "",
-            "password": ""
+            "password": "",
+            "confirmpassword": ""
 
         }
     )
@@ -19,15 +20,20 @@ const SignUp = () => {
     }
     const readValue = () => {
         console.log(data)
-        axios.post("http://localhost:8080/signup", data).then((response) => {
-            console . log(data) 
-            if(response.data.status == "success") {
-            alert("successfully signed up")
+        if (data.password==data.confirmpassword) {
+            axios.post("http://localhost:8080/signup", data).then((response) => {
+                console . log(data) 
+                if(response.data.status == "success") {
+                alert("successfully signed up")
+            } else {
+                alert("Error")
+            }
+    
+        }).catch () 
         } else {
-            alert("Error")
+            alert("Password Incorrect")
         }
-
-    }).catch ()
+       
     }
 return (
     <div>
@@ -72,7 +78,7 @@ return (
                         </div>
                         <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                             <label htmlFor="" className="form-label">Confirm Password</label>
-                            <input type="password" name="confirmpassword" id=""  className="form-control" />
+                            <input type="password" name="confirmpassword" id=""  className="form-control" value={data.confirmpassword} onChange={inputHandler}/>
                         </div>
                         <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
 
