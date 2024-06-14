@@ -23,7 +23,7 @@ const readValue=()=>{
             sessionStorage.setItem("userId",response.data.userId)
             navigate("/dashboard")
         } else {
-            alert("Failed")
+            alert(response.data.status)
         }
     }).catch(
         (error)=>{
