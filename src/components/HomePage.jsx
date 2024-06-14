@@ -14,13 +14,16 @@ const HomePage = () => {
 <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
   <div className="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://wallpapercave.com/wp/wp7570176.jpg"height="500px" className="d-block w-100" alt="..."/>
+      <img src="https://w0.peakpx.com/wallpaper/865/722/HD-wallpaper-munnar-bridge-fog-garden-kerala-ksrtc-nature-station-travel.jpg"height="500px" className="d-block w-100" alt="..."/>
     </div>
     <div className="carousel-item">
       <img src="https://www.aanavandi.com/blog/wp-content/uploads/2015/05/ksrtc-villege-photos-wynad-0030.jpg"height="500px" className="d-block w-100" alt="..."/>
     </div>
     <div className="carousel-item">
       <img src="https://img.onmanorama.com/content/dam/mm/en/travel/images/2022/9/5/ksrtc-travel.jpg"height="500px" className="d-block w-100" alt="..."/>
+    </div>
+    <div className="carousel-item">
+      <img src="https://img2.cgtrader.com/items/3085246/bdf76e9ca2/large/ksrtc-kerala-bus-model-3d-model-fbx-blend.jpg"height="500px" className="d-block w-100" alt="..."/>
     </div>
   </div>
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
